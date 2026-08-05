@@ -1,316 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[ Agency Name ] — Master of Ceremonies Agency</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#141311;
-    --paper:#FAF9F6;
-    --rule:#D9D6CF;
-    --muted:#726E66;
-    --cue:#7A1620;
-    --cue-dim:#7A1620cc;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
-  }
-  a{color:inherit;text-decoration:none;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
-  .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--muted);
-    display:flex;align-items:center;gap:8px;
-  }
-  .dot{
-    width:7px;height:7px;border-radius:50%;
-    background:var(--cue);
-    box-shadow:0 0 0 0 rgba(122,22,32,.5);
-    animation:pulse 2.4s infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(122,22,32,.45);}
-    70%{box-shadow:0 0 0 7px rgba(122,22,32,0);}
-    100%{box-shadow:0 0 0 0 rgba(122,22,32,0);}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .dot{animation:none;}
-    html{scroll-behavior:auto;}
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJE & Co — Master of Ceremonies Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#141311;
+      --paper:#FAF9F6;
+      --rule:#D9D6CF;
+      --muted:#726E66;
+      --cue:#7A1620;
+      --cue-dim:#7A1620cc;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      background:var(--paper);
+      color:var(--ink);
+      font-family:'Inter',sans-serif;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none;}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+    .eyebrow{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+      display:flex;align-items:center;gap:8px;
+    }
+    .dot{
+      width:7px;height:7px;border-radius:50%;
+      background:var(--cue);
+      box-shadow:0 0 0 0 rgba(122,22,32,.5);
+      animation:pulse 2.4s infinite;
+    }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(122,22,32,.45);}
+      70%{box-shadow:0 0 0 7px rgba(122,22,32,0);}
+      100%{box-shadow:0 0 0 0 rgba(122,22,32,0);}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .dot{animation:none;}
+      html{scroll-behavior:auto;}
+    }
 
-  /* NAV */
-  header{
-    position:sticky;top:0;z-index:20;
-    background:rgba(250,249,246,.92);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
-  }
-  nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:20px 0;
-  }
-  .wordmark{
-    font-family:'Fraunces',serif;
-    font-size:19px;
-    font-style:italic;
-    letter-spacing:.01em;
-  }
-  .navlinks{display:flex;gap:28px;align-items:center;font-size:14px;}
-  .navlinks a{color:var(--muted);transition:color .15s;}
-  .navlinks a:hover{color:var(--ink);}
-  .btn{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    padding:11px 20px;
-    border:1px solid var(--ink);
-    display:inline-block;
-    transition:background .15s,color .15s;
-  }
-  .btn:hover{background:var(--ink);color:var(--paper);}
-  .btn-solid{
-    background:var(--ink);color:var(--paper);
-  }
-  .btn-solid:hover{background:var(--cue);border-color:var(--cue);}
-  .btn-cue{border-color:var(--cue);color:var(--cue);}
-  .btn-cue:hover{background:var(--cue);color:var(--paper);}
+    /* NAV */
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(250,249,246,.92);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid var(--rule);
+    }
+    nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:20px 0;
+    }
+    .wordmark{
+      font-family:'Fraunces',serif;
+      font-size:19px;
+      font-style:italic;
+      letter-spacing:.01em;
+    }
+    .navlinks{display:flex;gap:28px;align-items:center;font-size:14px;}
+    .navlinks a{color:var(--muted);transition:color .15s;}
+    .navlinks a:hover{color:var(--ink);}
+    .btn{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      padding:11px 20px;
+      border:1px solid var(--ink);
+      display:inline-block;
+      transition:background .15s,color .15s;
+    }
+    .btn:hover{background:var(--ink);color:var(--paper);}
+    .btn-solid{
+      background:var(--ink);color:var(--paper);
+    }
+    .btn-solid:hover{background:var(--cue);border-color:var(--cue);}
+    .btn-cue{border-color:var(--cue);color:var(--cue);}
+    .btn-cue:hover{background:var(--cue);color:var(--paper);}
 
-  /* HERO */
-  .hero{
-    padding:120px 0 100px;
-    border-bottom:1px solid var(--rule);
-  }
-  .hero .eyebrow{margin-bottom:28px;}
-  h1{
-    font-family:'Fraunces',serif;
-    font-weight:400;
-    font-size:clamp(40px,6vw,74px);
-    line-height:1.04;
-    letter-spacing:-.01em;
-    max-width:16ch;
-  }
-  h1 em{font-style:italic;font-weight:400;color:var(--cue);}
-  .hero-sub{
-    margin-top:28px;
-    max-width:46ch;
-    font-size:18px;
-    color:var(--muted);
-  }
-  .hero-ctas{display:flex;gap:14px;margin-top:44px;flex-wrap:wrap;}
+    /* HERO */
+    .hero{
+      padding:120px 0 100px;
+      border-bottom:1px solid var(--rule);
+    }
+    .hero .eyebrow{margin-bottom:28px;}
+    h1{
+      font-family:'Fraunces',serif;
+      font-weight:400;
+      font-size:clamp(40px,6vw,74px);
+      line-height:1.04;
+      letter-spacing:-.01em;
+      max-width:16ch;
+    }
+    h1 em{font-style:italic;font-weight:400;color:var(--cue);}
+    .hero-sub{
+      margin-top:28px;
+      max-width:46ch;
+      font-size:18px;
+      color:var(--muted);
+    }
+    .hero-ctas{display:flex;gap:14px;margin-top:44px;flex-wrap:wrap;}
 
-  /* CUE SPLIT */
-  .split-label{
-    text-align:center;
-    padding:44px 0 8px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--muted);
-  }
-  .split{
-    display:grid;
-    grid-template-columns:1fr 1px 1fr;
-    border-bottom:1px solid var(--rule);
-  }
-  .cable{
-    background:linear-gradient(to bottom, transparent 0, var(--rule) 24px, var(--rule) calc(100% - 24px), transparent 100%);
-    position:relative;
-  }
-  .cable::before,.cable::after{
-    content:'';
-    position:absolute;left:50%;transform:translateX(-50%);
-    width:9px;height:9px;border-radius:50%;
-    background:var(--cue);
-  }
-  .cable::before{top:16px;}
-  .cable::after{bottom:16px;}
-  .panel{padding:64px 48px;}
-  .panel-left{border-right:0;}
-  .panel .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--cue);margin-bottom:18px;
-  }
-  .panel h2{
-    font-family:'Fraunces',serif;
-    font-weight:400;
-    font-size:32px;
-    line-height:1.15;
-    margin-bottom:18px;
-  }
-  .panel p{color:var(--muted);font-size:15.5px;max-width:38ch;margin-bottom:28px;}
-  .panel ul{list-style:none;margin-bottom:32px;}
-  .panel li{
-    font-size:14.5px;
-    padding:11px 0;
-    border-top:1px solid var(--rule);
-    display:flex;justify-content:space-between;gap:16px;
-  }
-  .panel li:last-child{border-bottom:1px solid var(--rule);}
-  .panel li span:last-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:right;}
+    /* CUE SPLIT */
+    .split-label{
+      text-align:center;
+      padding:44px 0 8px;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1px 1fr;
+      border-bottom:1px solid var(--rule);
+    }
+    .cable{
+      background:linear-gradient(to bottom, transparent 0, var(--rule) 24px, var(--rule) calc(100% - 24px), transparent 100%);
+      position:relative;
+    }
+    .cable::before,.cable::after{
+      content:'';
+      position:absolute;left:50%;transform:translateX(-50%);
+      width:9px;height:9px;border-radius:50%;
+      background:var(--cue);
+    }
+    .cable::before{top:16px;}
+    .cable::after{bottom:16px;}
+    .panel{padding:64px 48px;}
+    .panel-left{border-right:0;}
+    .panel .tag{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--cue);margin-bottom:18px;
+    }
+    .panel h2{
+      font-family:'Fraunces',serif;
+      font-weight:400;
+      font-size:32px;
+      line-height:1.15;
+      margin-bottom:18px;
+    }
+    .panel p{color:var(--muted);font-size:15.5px;line-height:1.65;max-width:44ch;margin-bottom:28px;}
+    .panel ul{list-style:none;margin-bottom:32px;}
+    .panel li{
+      font-size:14.5px;
+      padding:11px 0;
+      border-top:1px solid var(--rule);
+      display:flex;justify-content:space-between;gap:16px;
+    }
+    .panel li:last-child{border-bottom:1px solid var(--rule);}
+    .panel li span:last-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:right;}
 
-  /* RUN OF SHOW */
-  .runshow{padding:96px 0;border-bottom:1px solid var(--rule);}
-  .runshow-head{max-width:52ch;margin-bottom:56px;}
-  .runshow-head .eyebrow{margin-bottom:18px;}
-  .runshow-head h2{
-    font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.15;
-  }
-  .cues{border-top:1px solid var(--rule);}
-  .cue-row{
-    display:grid;grid-template-columns:70px 1fr 1fr;gap:24px;
-    padding:22px 0;border-bottom:1px solid var(--rule);
-    align-items:baseline;
-  }
-  .cue-row .num{
-    font-family:'IBM Plex Mono',monospace;color:var(--cue);font-size:13px;
-  }
-  .cue-row .cue-title{font-size:16px;font-weight:500;}
-  .cue-row .cue-desc{color:var(--muted);font-size:14.5px;}
-  @media (max-width:720px){
-    .cue-row{grid-template-columns:40px 1fr;}
-    .cue-row .cue-desc{grid-column:2;}
-  }
+    /* RUN OF SHOW */
+    .runshow{padding:96px 0;border-bottom:1px solid var(--rule);}
+    .runshow-head{max-width:52ch;margin-bottom:56px;}
+    .runshow-head .eyebrow{margin-bottom:18px;}
+    .runshow-head h2{
+      font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.15;
+    }
+    .cues{border-top:1px solid var(--rule);}
+    .cue-row{
+      display:grid;grid-template-columns:70px 1fr 1fr;gap:24px;
+      padding:22px 0;border-bottom:1px solid var(--rule);
+      align-items:baseline;
+    }
+    .cue-row .num{
+      font-family:'IBM Plex Mono',monospace;color:var(--cue);font-size:13px;
+    }
+    .cue-row .cue-title{font-size:16px;font-weight:500;}
+    .cue-row .cue-desc{color:var(--muted);font-size:14.5px;}
+    @media (max-width:720px){
+      .cue-row{grid-template-columns:40px 1fr;}
+      .cue-row .cue-desc{grid-column:2;}
+    }
 
-  /* QUOTE */
-  .quote{
-    padding:100px 0;
-    border-bottom:1px solid var(--rule);
-    text-align:center;
-  }
-  .quote blockquote{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-weight:400;
-    font-size:clamp(24px,3.4vw,36px);
-    line-height:1.35;
-    max-width:26ch;
-    margin:0 auto 28px;
-  }
-  .quote cite{
-    font-style:normal;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    color:var(--muted);
-  }
+    .wordmark {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #111;
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(
+              120deg,
+              #000 0%,
+              #333 40%,
+              #111 60%,
+              #000 100%
+      );
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: blackShine 6s ease-in-out infinite;
+    }
 
-  /* FINAL CTA */
-  .final{
-    padding:110px 0;
-    text-align:center;
-    background:var(--ink);
-    color:var(--paper);
-  }
-  .final .eyebrow{color:#9a958c;justify-content:center;}
-  .final .eyebrow .dot{background:var(--cue);}
-  .final h2{
-    font-family:'Fraunces',serif;font-weight:400;
-    font-size:clamp(32px,4.4vw,52px);
-    margin:22px 0 40px;
-  }
-  .final .hero-ctas{justify-content:center;}
-  .final .btn{border-color:var(--paper);}
-  .final .btn-solid{background:var(--paper);color:var(--ink);}
-  .final .btn-solid:hover{background:var(--cue);color:var(--paper);border-color:var(--cue);}
-  .final .btn:not(.btn-solid){color:var(--paper);}
-  .final .btn:not(.btn-solid):hover{background:var(--paper);color:var(--ink);}
+    @keyframes blackShine {
+      0%, 100% {
+        background-position: 0% center;
+      }
+      50% {
+        background-position: 100% center;
+      }
+    }
+    /* QUOTE */
+    .quote{
+      padding:100px 0;
+      border-bottom:1px solid var(--rule);
+      text-align:center;
+    }
+    .quote blockquote{
+      font-family:'Fraunces',serif;
+      font-style:italic;
+      font-weight:400;
+      font-size:clamp(24px,3.4vw,36px);
+      line-height:1.35;
+      max-width:26ch;
+      margin:0 auto 28px;
+    }
+    .quote cite{
+      font-style:normal;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
 
-  footer{
-    padding:36px 0;
-    display:flex;justify-content:space-between;align-items:center;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    color:var(--muted);
-    flex-wrap:wrap;gap:12px;
-  }
+    /* FINAL CTA */
+    .final{
+      padding:110px 0;
+      text-align:center;
+      background:var(--ink);
+      color:var(--paper);
+    }
+    .final .eyebrow{color:#9a958c;justify-content:center;}
+    .final .eyebrow .dot{background:var(--cue);}
+    .final h2{
+      font-family:'Fraunces',serif;font-weight:400;
+      font-size:clamp(32px,4.4vw,52px);
+      margin:22px 0 40px;
+    }
+    .final .hero-ctas{justify-content:center;}
+    .final .btn{border-color:var(--paper);}
+    .final .btn-solid{background:var(--paper);color:var(--ink);}
+    .final .btn-solid:hover{background:var(--cue);color:var(--paper);border-color:var(--cue);}
+    .final .btn:not(.btn-solid){color:var(--paper);}
+    .final .btn:not(.btn-solid):hover{background:var(--paper);color:var(--ink);}
 
-  :focus-visible{outline:2px solid var(--cue);outline-offset:3px;}
+    footer{
+      padding:36px 0;
+      display:flex;justify-content:space-between;align-items:center;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:11.5px;
+      color:var(--muted);
+      flex-wrap:wrap;gap:12px;
+    }
+
+    :focus-visible{outline:2px solid var(--cue);outline-offset:3px;}
 
 
-  /* FOUNDER */
-  .founder{
-    padding:90px 0;
-    border-bottom:1px solid var(--rule);
-  }
-  .founder-grid{
-    display:grid;
-    grid-template-columns:320px 1fr;
-    gap:60px;
-    align-items:center;
-  }
-  .founder-photo{
-    aspect-ratio:4/5;
-    border:1px solid var(--rule);
-    background:#f5f3ef;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--muted);
-    font-family:'IBM Plex Mono',monospace;
-    overflow:hidden;
-  }
-  .founder-photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
-  .founder h2{
-    font-family:'Fraunces',serif;
-    font-weight:400;
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:26px;
-  }
-  .founder p{
-    max-width:62ch;
-    color:var(--muted);
-    font-size:17px;
-    margin-bottom:22px;
-  }
+    /* FOUNDER */
+    .founder{
+      padding:90px 0;
+      border-bottom:1px solid var(--rule);
+    }
+    .founder-grid{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:60px;
+      align-items:center;
+    }
+    .founder-photo{
+      aspect-ratio:4/5;
+      border:1px solid var(--rule);
+      background:#f5f3ef;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-family:'IBM Plex Mono',monospace;
+      overflow:hidden;
+    }
+    .founder-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .founder h2{
+      font-family:'Fraunces',serif;
+      font-weight:400;
+      font-size:42px;
+      line-height:1.15;
+      margin-bottom:26px;
+    }
+    .founder p{
+      max-width:62ch;
+      color:var(--muted);
+      font-size:17px;
+      margin-bottom:22px;
+    }
 
-  @media (max-width:860px){
-    .split{grid-template-columns:1fr;}
-    .cable{display:none;}
-    .panel{border-bottom:1px solid var(--rule);}
-    .navlinks{display:none;}
-  }
+    @media (max-width:860px){
+      .split{grid-template-columns:1fr;}
+      .cable{display:none;}
+      .panel{border-bottom:1px solid var(--rule);}
+      .navlinks{display:none;}
+    }
 
-  .modal{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;justify-content:center;align-items:center;z-index:9999;padding:30px;}
-  .modal.active{display:flex;}
-  .modal-window{position:relative;width:min(900px,95vw);height:min(90vh,950px);background:#fff;border-radius:12px;overflow:hidden;}
-  .modal iframe{width:100%;height:100%;border:none;}
-  .modal-close{position:absolute;top:14px;right:14px;width:42px;height:42px;border:0;border-radius:50%;cursor:pointer;font-size:28px;}
-  body.modal-open{overflow:hidden;}
-</style>
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;justify-content:center;align-items:center;z-index:9999;padding:30px;}
+    .modal.active{display:flex;}
+    .modal-window{position:relative;width:min(900px,95vw);height:min(90vh,950px);background:#fff;border-radius:12px;overflow:hidden;}
+    .modal iframe{width:100%;height:100%;border:none;}
+    .modal-close{position:absolute;top:14px;right:14px;width:42px;height:42px;border:0;border-radius:50%;cursor:pointer;font-size:28px;}
+    body.modal-open{overflow:hidden;}
+
+    /* ===== MOBILE & TABLET OPTIMISATION ===== */
+    @media (max-width:1024px){
+      .founder-grid{
+        grid-template-columns:240px 1fr;
+        gap:40px;
+      }
+      .hero{padding:90px 0 72px;}
+      .runshow,.quote{padding:72px 0;}
+      .final{padding:80px 0;}
+    }
+
+    @media (max-width:860px){
+      .founder-grid{
+        grid-template-columns:1fr;
+        gap:28px;
+      }
+      .founder-photo{max-width:260px;margin:0 auto;}
+      .founder{padding:64px 0;text-align:center;}
+      .founder p{margin-left:auto;margin-right:auto;}
+      .founder .eyebrow{justify-content:center;}
+      .panel{padding:48px 32px;}
+      nav{padding:16px 0;}
+    }
+
+    @media (max-width:640px){
+      .wrap{padding:0 20px;}
+      .hero{padding:64px 0 48px;}
+      .hero-sub{font-size:16px;}
+      .hero-ctas{margin-top:32px;}
+      .hero-ctas .btn{flex:1 1 auto;text-align:center;}
+      .split-label{padding:32px 0 6px;}
+      .panel{padding:40px 24px;}
+      .panel h2{font-size:26px;}
+      .runshow{padding:56px 0;}
+      .runshow-head{margin-bottom:36px;}
+      .runshow-head h2{font-size:27px;}
+      .quote{padding:64px 0;}
+      .quote blockquote{max-width:22ch;}
+      .final{padding:64px 0;}
+      .final h2{margin:16px 0 30px;}
+      .final .hero-ctas .btn{width:100%;}
+      footer{padding:28px 0;text-align:center;}
+      footer .wrap{flex-direction:column;text-align:center;}
+      .modal{padding:14px;}
+      .modal-window{width:100%;height:min(88vh,900px);border-radius:8px;}
+    }
+
+    @media (max-width:400px){
+      h1{font-size:clamp(32px,9vw,40px);}
+      .panel li{flex-direction:column;gap:2px;}
+      .panel li span:last-child{text-align:left;}
+    }
+
+    /* TRUST — logos + testimonials */
+    .trust{
+      padding:80px 0 90px;
+      border-bottom:1px solid var(--rule);
+    }
+    .trust h2{
+      font-family:'Fraunces',serif;
+      font-weight:400;
+      font-size:28px;
+      line-height:1.2;
+      margin:16px 0 40px;
+      max-width:40ch;
+    }
+    .logo-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+    .logo-chip{
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+      border:1px solid var(--rule);
+      padding:16px 26px;
+      white-space:nowrap;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .logo-chip img{
+      height:84px;
+      width:auto;
+      max-width:360px;
+      object-fit:contain;
+      display:block;
+    }
+    .testimonial-block{
+      margin-top:64px;
+      padding-top:56px;
+      border-top:1px solid var(--rule);
+    }
+    .testimonial{
+      font-family:'Fraunces',serif;
+      font-style:italic;
+      font-weight:400;
+      font-size:clamp(20px,2.6vw,28px);
+      line-height:1.5;
+      max-width:58ch;
+      margin-top:22px;
+    }
+    .testimonial cite{
+      display:block;
+      margin-top:24px;
+      font-style:normal;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    @media (max-width:1024px){
+      .logo-chip{padding:14px 22px;}
+      .logo-chip img{height:26px;max-width:110px;}
+    }
+    @media (max-width:640px){
+      .trust{padding:56px 0 64px;}
+      .trust h2{font-size:22px;margin:12px 0 28px;}
+      .logo-row{gap:12px;}
+      .logo-chip{padding:12px 18px;font-size:11px;flex:1 1 calc(50% - 12px);}
+      .logo-chip img{height:22px;max-width:90px;}
+      .testimonial-block{margin-top:44px;padding-top:40px;}
+      .testimonial{margin-top:16px;}
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
     <nav>
-      <a class="wordmark" href="#">[ Agency Name ]</a>
+      <a class="wordmark" href="#"> SJE & Co </a>
       <div class="navlinks">
-        <a href="#clients">For clients</a>
+        <a href="#clients">For Clients</a>
         <a href="#mcs">For MCs</a>
         <a href="#how">How it works</a>
       </div>
-      <a class="btn btn-solid" href="#" data-form="client">Book an MC</a>
+      <a class="btn btn-solid" href="#" data-form="client">Tell Us About Your Event</a>
     </nav>
   </div>
 </header>
@@ -321,8 +481,8 @@
     <h1>Every event needs a voice <em>that knows the room.</em></h1>
     <p class="hero-sub">Founded by a professional Master of Ceremonies with 10+ years of live event experience, we connect exceptional MCs with weddings, corporate events, and celebrations across the UK.<br><br>We understand what makes a room work: timing, energy, confidence, and the ability to read an audience. Our roster is built around MCs who bring more than a microphone — they bring control of the moment.</p>
     <div class="hero-ctas">
-      <a class="btn btn-solid" href="#" data-form="client">Book an MC</a>
-      <a class="btn btn-cue" href="#" data-form="mc">Join the roster</a>
+      <a class="btn btn-solid" href="#" data-form="client">Tell Us About Your Event</a>
+      <a class="btn btn-cue" href="#" data-form="mc">Apply To Join Our Roster</a>
     </div>
   </div>
 
@@ -331,13 +491,34 @@
 <section class="founder">
   <div class="wrap founder-grid">
     <div class="founder-photo">
-      <img src="image/founder.jpeg" alt="[Founder Name]">
+      <img src="image/founder.jpeg" alt="Sonia Joy">
     </div>
     <div>
       <div class="eyebrow"><span class="dot"></span> Founder</div>
       <h2>Built from the stage, not behind a desk.</h2>
-      <p>After more than a decade hosting live events, <strong>[Founder Name]</strong> created <strong>[Agency Name]</strong> to solve a simple problem: finding the right MC should feel effortless for clients, while talented MCs should have access to quality opportunities without losing their independence.</p>
+      <p>After more than a decade hosting live events, <strong>Sonia Joy</strong> created <strong>SJE & Co</strong> to solve a simple problem: finding the right MC should feel effortless for clients, while talented MCs should have access to quality opportunities without losing their independence.</p>
       <p>Every MC we work with is selected for professionalism, personality, and the ability to make every audience feel part of the occasion.</p>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="trust">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Founder trust</div>
+    <h2>Trusted by organisations including:</h2>
+    <div class="logo-row">
+      <span class="logo-chip"><img src="image/bob.JPG.jpeg" alt="bob"> </span>
+      <span class="logo-chip"><img src="image/cahn.PNG" alt="canh"> </span>
+      <span class="logo-chip"><img src="image/ignite.PNG" alt="ignite"> </span>
+      <span class="logo-chip"><img src="image/made4more.JPG.jpeg" alt="made4more"> </span>
+    </div>
+
+    <div class="testimonial-block">
+      <div class="eyebrow"><span class="dot"></span> Client testimonials</div>
+      <blockquote class="testimonial">
+        “My goodness, what a compère. Excellent hosting. You are so eloquent and elegant. Effortlessly beautiful. You owned the room and made sure you carried us all along. If I have any event I am sure calling on you to host it.”
+        <cite>— Dr Doyinsola Olaniyan</cite>
+      </blockquote>
     </div>
   </div>
 </section>
@@ -349,9 +530,9 @@
     <h2>The right MC changes the room.</h2>
     <p>Your event deserves more than someone who can hold a microphone. We match you with an MC who understands your audience, your format, and the atmosphere you want to create.</p>
     <ul>
-      <li><span>Weddings</span><span>Toasts · timeline · MC</span></li>
-      <li><span>Corporate</span><span>Conferences · awards · launches</span></li>
-      <li><span>Private events</span><span>Milestones · galas</span></li>
+      <li><span>Weddings</span><span>Ceremony · Reception · Wedding Breakfast</span></li>
+      <li><span>Corporate</span><span>Conferences · Awards · Launches</span></li>
+      <li><span>Private events</span><span>Milestones · Galas· Exclusives</span></li>
     </ul>
     <a class="btn btn-solid" href="#" data-form="client">Enquire about a booking</a>
   </div>
@@ -361,7 +542,7 @@
   <div class="panel panel-right" id="mcs">
     <div class="tag">For MCs</div>
     <h2>More opportunities. Your name stays yours.</h2>
-    <p>We know the industry because we’re part of it. Our roster is designed to support independent MCs — helping you find bookings while keeping your identity, reputation, and relationships intact.</p>
+    <p>We know the industry because we're part of it. Our roster is designed to support independent MCs — helping you find bookings while keeping your identity, reputation, and relationships intact.</p>
     <ul>
       <li><span>Exclusivity</span><span>None required</span></li>
       <li><span>Your fee</span><span>Paid in full</span></li>
@@ -375,28 +556,23 @@
   <div class="wrap">
     <div class="runshow-head">
       <div class="eyebrow"><span class="dot"></span> Run of show</div>
-      <h2>How a booking actually moves.</h2>
+      <h2>How It Works.</h2>
     </div>
     <div class="cues">
       <div class="cue-row">
         <span class="num">01</span>
-        <span class="cue-title">Brief comes in</span>
-        <span class="cue-desc">Client shares event date, format, and tone.</span>
+        <span class="cue-title">Tell us about your event</span>
+        <span class="cue-desc">Share your event details and requirements.</span>
       </div>
       <div class="cue-row">
         <span class="num">02</span>
-        <span class="cue-title">MC is matched</span>
-        <span class="cue-desc">We put forward MCs suited to the room, not just available on the day.</span>
+        <span class="cue-title">We recommend the right MC</span>
+        <span class="cue-desc">We'll personally shortlist the best fit.</span>
       </div>
       <div class="cue-row">
         <span class="num">03</span>
-        <span class="cue-title">Terms confirmed</span>
-        <span class="cue-desc">Fee, schedule, and expectations set out in writing before anyone commits.</span>
-      </div>
-      <div class="cue-row">
-        <span class="num">04</span>
-        <span class="cue-title">MC delivers</span>
-        <span class="cue-desc">On the day, it's their room, their voice, their call.</span>
+        <span class="cue-title">Book with confidence</span>
+        <span class="cue-desc">We'll introduce you directly and support the process from start to finish.</span>
       </div>
     </div>
   </div>
@@ -404,25 +580,25 @@
 
 <section class="quote">
   <div class="wrap">
-    <blockquote>"They found the booking. I still ran the room my way."</blockquote>
-    <cite>— MC, roster member</cite>
+    <blockquote>"Delivering MCs that elevate your events and ignite audiences."</blockquote>
+    <cite>— Founder, Sonia Joy</cite>
   </div>
 </section>
 
 <section class="final">
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span> Currently booking</div>
-    <h2>Ready when you are.</h2>
+    <h2>Find the right MC for your event.</h2>
     <div class="hero-ctas">
-      <a class="btn btn-solid" href="#" data-form="client">Book an MC</a>
-      <a class="btn" href="#" data-form="mc">Join the roster</a>
+      <a class="btn btn-solid" href="#" data-form="client">Tell Us About Your Event</a>
+      <a class="btn" href="#" data-form="mc">Apply To Join Our Roster</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
-    <span>[ Agency Name ] © 2026</span>
+    <span>Sonia Joy ©️ 2026</span>
     <span>Founded by a professional MC · 10+ years live experience · UK-based</span>
   </div>
 </footer>
