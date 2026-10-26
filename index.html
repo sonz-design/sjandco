@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SJE & Co — Master of Ceremonies Agency</title>
+  <title>SJE & Co — MCs, Speakers & Presenters</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -457,6 +457,111 @@
       .testimonial-block{margin-top:44px;padding-top:40px;}
       .testimonial{margin-top:16px;}
     }
+
+    /* CONTACT */
+    .contact{margin:64px auto 0;max-width:640px;padding-top:40px;border-top:1px solid rgba(250,249,246,.14);}
+    .contact-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a958c;margin-bottom:22px;}
+    .contact-grid{display:grid;grid-template-columns:1fr;max-width:420px;margin:0 auto;border:1px solid rgba(250,249,246,.18);}
+    .contact-item{display:block;padding:24px 20px;text-align:center;transition:background .2s;}
+    .contact-item + .contact-item{border-left:1px solid rgba(250,249,246,.18);}
+    .contact-item:hover{background:rgba(250,249,246,.06);}
+    .contact-item small{display:block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#9a958c;margin-bottom:10px;}
+    .contact-item span{font-family:'Fraunces',serif;font-size:19px;color:var(--paper);white-space:nowrap;}
+    @media (max-width:640px){
+      .contact{margin-top:48px;padding-top:32px;}
+      .contact-grid{grid-template-columns:1fr;}
+      .contact-item + .contact-item{border-left:0;border-top:1px solid rgba(250,249,246,.18);}
+      .contact-item span{font-size:18px;}
+    }
+    footer a{color:var(--ink);transition:color .15s;}
+    footer .disclaimer{flex-basis:100%;margin-top:6px;padding-top:16px;border-top:1px solid var(--rule);font-size:11px;line-height:1.7;color:var(--muted);max-width:none;}
+    footer a:hover{color:var(--cue);}
+
+    /* LOGO ON SMALL SCREENS */
+    .wordmark{white-space:nowrap;}
+    @media (max-width:640px){
+      .wordmark{font-size:1.3rem;letter-spacing:.16em;}
+      nav .btn{padding:10px 14px;font-size:11px;}
+    }
+    @media (max-width:400px){
+      .wordmark{font-size:1.1rem;letter-spacing:.12em;}
+      nav .btn{padding:9px 11px;font-size:10px;letter-spacing:.04em;}
+    }
+
+    /* HOST BRIEF */
+    .brief{padding:80px 0;border-bottom:1px solid var(--rule);}
+    .brief-box{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;border:1px solid var(--rule);background:#fff;padding:48px;}
+    .brief-box h2{font-family:'Fraunces',serif;font-weight:400;font-size:32px;line-height:1.15;margin:16px 0 14px;}
+    .brief-box p{color:var(--muted);font-size:16px;line-height:1.65;}
+    .brief-box .free{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cue);}
+    .brief-cta{text-align:right;}
+    @media (max-width:860px){.brief-box{grid-template-columns:1fr;gap:24px;padding:32px 24px;}.brief-cta{text-align:left;}}
+    @media (max-width:640px){.brief{padding:56px 0;}.brief-box h2{font-size:26px;}.brief-cta .btn{width:100%;text-align:center;}}
+
+    /* PROOF BAR */
+    .proof{border-bottom:1px solid var(--rule);}
+    .proof-row{display:grid;grid-template-columns:repeat(3,1fr);}
+    .proof-item{padding:26px 20px;text-align:center;}
+    .proof-item + .proof-item{border-left:1px solid var(--rule);}
+    .proof-item strong{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:24px;color:var(--ink);margin-bottom:4px;}
+    .proof-item span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+    @media (max-width:640px){
+      .proof-row{grid-template-columns:1fr;}
+      .proof-item{padding:18px 16px;}
+      .proof-item + .proof-item{border-left:0;border-top:1px solid var(--rule);}
+      .proof-item strong{font-size:21px;}
+    }
+    .runshow-head p{color:var(--muted);font-size:16px;line-height:1.65;margin-top:16px;}
+
+    /* ROSTER FILTER */
+    .filters{display:flex;flex-wrap:wrap;gap:10px;margin:-16px 0 32px;}
+    .filter{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--rule);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s;}
+    .filter:hover{border-color:var(--ink);color:var(--ink);}
+    .filter.active{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+    .talent.hidden{display:none;}
+
+    /* WHAT WE SUPPLY */
+    .supply{padding:96px 0;border-bottom:1px solid var(--rule);}
+    .section-head{max-width:56ch;margin-bottom:48px;}
+    .section-head .eyebrow{margin-bottom:18px;}
+    .section-head h2{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.15;margin-bottom:16px;}
+    .section-head p{color:var(--muted);font-size:16px;line-height:1.65;}
+    .supply-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-left:1px solid var(--rule);}
+    .supply-item{padding:32px 28px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+    .supply-item .num{font-family:'IBM Plex Mono',monospace;color:var(--cue);font-size:13px;display:block;margin-bottom:18px;}
+    .supply-item h3{font-family:'Fraunces',serif;font-weight:400;font-size:26px;margin-bottom:10px;}
+    .supply-item p{color:var(--muted);font-size:15px;line-height:1.6;}
+    .supply-item .note{display:inline-block;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cue);}
+
+    /* ROSTER */
+    .roster{padding:96px 0;border-bottom:1px solid var(--rule);}
+    .roster-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;align-items:start;}
+    .talent{border:1px solid var(--rule);background:#fff;}
+    .talent-photo{aspect-ratio:4/3;overflow:hidden;background:#f5f3ef;}
+    .talent-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+    .talent-body{padding:28px;}
+    .talent-role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cue);margin-bottom:10px;}
+    .talent h3{font-family:'Fraunces',serif;font-weight:400;font-size:28px;margin-bottom:14px;}
+    .talent p{color:var(--muted);font-size:15px;line-height:1.65;}
+    .talent-tags{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);}
+    .voice{margin-top:22px;}
+    .voice-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+    .voice video{width:100%;max-width:220px;aspect-ratio:9/16;background:var(--ink);display:block;border:1px solid var(--rule);}
+    .stars{color:var(--cue);letter-spacing:.2em;font-size:15px;margin-top:22px;}
+
+
+    @media (max-width:860px){
+      .supply-grid{grid-template-columns:1fr;}
+      .roster-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:640px){
+      .supply,.roster{padding:56px 0;}
+      .section-head{margin-bottom:32px;}
+      .section-head h2{font-size:27px;}
+      .supply-item{padding:26px 22px;}
+      .talent-body{padding:22px;}
+      .talent h3{font-size:24px;}
+    }
   </style>
 </head>
 <body>
@@ -467,8 +572,11 @@
       <a class="wordmark" href="#"> SJE & Co </a>
       <div class="navlinks">
         <a href="#clients">For Clients</a>
+        <a href="#roster">Roster</a>
         <a href="#mcs">For MCs</a>
         <a href="#how">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#contact">Contact</a>
       </div>
       <a class="btn btn-solid" href="#" data-form="client">Tell Us About Your Event</a>
     </nav>
@@ -478,14 +586,22 @@
 <section class="hero">
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span> On air — booking now</div>
-    <h1>Every event needs a voice <em>that knows the room.</em></h1>
-    <p class="hero-sub">Founded by a professional Master of Ceremonies with 10+ years of live event experience, we connect exceptional MCs with weddings, corporate events, and celebrations across the UK.<br><br>We understand what makes a room work: timing, energy, confidence, and the ability to read an audience. Our roster is built around MCs who bring more than a microphone — they bring control of the moment.</p>
+    <h1>The right voice <em>for every event.</em></h1>
+    <p class="hero-sub">MCs, speakers and presenters for weddings, conferences, awards and celebrations across the UK. Founded by a professional Master of Ceremonies with 10+ years of live event experience.<br><br>We understand what makes an event work: timing, energy, confidence, and the ability to read an audience. Our roster is built around talent who bring more than a microphone — they bring control of the moment.</p>
     <div class="hero-ctas">
       <a class="btn btn-solid" href="#" data-form="client">Tell Us About Your Event</a>
       <a class="btn btn-cue" href="#" data-form="mc">Apply To Join Our Roster</a>
     </div>
   </div>
 
+</section>
+
+<section class="proof" aria-label="Why clients trust SJE & Co">
+  <div class="wrap proof-row">
+    <div class="proof-item"><strong>10+ years</strong><span>Live event experience</span></div>
+    <div class="proof-item"><strong>5-star</strong><span>Client reviews</span></div>
+    <div class="proof-item"><strong>The Coronation</strong><span>Among our talent's credits</span></div>
+  </div>
 </section>
 
 <section class="founder">
@@ -497,7 +613,7 @@
       <div class="eyebrow"><span class="dot"></span> Founder</div>
       <h2>Built from the stage, not behind a desk.</h2>
       <p>After more than a decade hosting live events, <strong>Sonia Joy</strong> created <strong>SJE & Co</strong> to solve a simple problem: finding the right MC should feel effortless for clients, while talented MCs should have access to quality opportunities without losing their independence.</p>
-      <p>Every MC we work with is selected for professionalism, personality, and the ability to make every audience feel part of the occasion.</p>
+      <p>Everyone on our roster is selected for professionalism, personality, and the ability to make every audience feel part of the occasion.</p>
     </div>
   </div>
 </section>
@@ -515,7 +631,12 @@
 
     <div class="testimonial-block">
       <div class="eyebrow"><span class="dot"></span> Client testimonials</div>
+      <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
       <blockquote class="testimonial">
+        “Sonia was extremely helpful in securing us with an amazing MC! Richard MC’d our wedding and we couldn’t have asked for better. He made the experience very stress-free for us, and very enjoyable for all the guests. Would 1000% recommend!”
+        <cite>— Elizabeth &amp; Ethan · Married 12.08.26 · 5-star Google review</cite>
+      </blockquote>
+      <blockquote class="testimonial" style="margin-top:48px;">
         “My goodness, what a compère. Excellent hosting. You are so eloquent and elegant. Effortlessly beautiful. You owned the room and made sure you carried us all along. If I have any event I am sure calling on you to host it.”
         <cite>— Dr Doyinsola Olaniyan</cite>
       </blockquote>
@@ -527,11 +648,11 @@
 <div class="split" id="split">
   <div class="panel panel-left" id="clients">
     <div class="tag">For clients</div>
-    <h2>The right MC changes the room.</h2>
-    <p>Your event deserves more than someone who can hold a microphone. We match you with an MC who understands your audience, your format, and the atmosphere you want to create.</p>
+    <h2>The right voice changes the whole event.</h2>
+    <p>Your event deserves more than someone who can hold a microphone. We match you with an MC, speaker or presenter who understands your audience, your format, and the atmosphere you want to create.</p>
     <ul>
       <li><span>Weddings</span><span>Ceremony · Reception · Wedding Breakfast</span></li>
-      <li><span>Corporate</span><span>Conferences · Awards · Launches</span></li>
+      <li><span>Corporate</span><span>Conferences · Awards · Launches<br>MCs · Voice of God · Speakers</span></li>
       <li><span>Private events</span><span>Milestones · Galas· Exclusives</span></li>
     </ul>
     <a class="btn btn-solid" href="#" data-form="client">Enquire about a booking</a>
@@ -552,11 +673,90 @@
   </div>
 </div>
 
+<section class="supply" id="supply">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> MCs · Speakers · Presenters</div>
+      <h2>Everything your event needs on stage.</h2>
+      <p>One enquiry covers it all. Tell us about your event and we'll match the right talent to your audience, format and atmosphere.</p>
+    </div>
+    <div class="supply-grid">
+      <div class="supply-item">
+        <span class="num">01</span>
+        <h3>MCs</h3>
+        <p>Hosts who keep weddings, galas and conferences flowing and on time.</p>
+      </div>
+      <div class="supply-item">
+        <span class="num">02</span>
+        <h3>Speakers</h3>
+        <p>Keynotes and talks for conferences, away days and awards.</p>
+        <span class="note">Available on request</span>
+      </div>
+      <div class="supply-item">
+        <span class="num">03</span>
+        <h3>Presenters</h3>
+        <p>Voice of God announcers, awards presenters and panel hosts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roster" id="roster">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> The roster</div>
+      <h2>Hand-picked talent for every kind of event.</h2>
+      <p>A small, carefully chosen roster, so every booking gets a personal touch.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter the roster by event type">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="weddings">Weddings</button>
+      <button class="filter" data-filter="corporate">Corporate</button>
+      <button class="filter" data-filter="awards">Awards &amp; galas</button>
+    </div>
+    <div class="roster-grid">
+
+      <article class="talent" data-tags="weddings corporate">
+        <div class="talent-photo">
+          <img src="image/richard.jpg" alt="Richard hosting an event, microphone in hand, with a smiling guest beside him" loading="lazy" style="object-position:30% 30%;">
+        </div>
+        <div class="talent-body">
+          <div class="talent-role">MC</div>
+          <h3>Richard</h3>
+          <p>Quick-thinking and witty, Richard reads an audience fast and keeps the energy right from start to finish. He is warm and attentive with the hosts and every guest, so the event feels relaxed and runs smoothly, even when plans change on the day. Credits include the Methodist Church and a range of corporate events.</p>
+          <div class="talent-tags">Weddings · Corporate · Celebrations</div>
+        </div>
+      </article>
+
+      <article class="talent" data-tags="awards corporate">
+        <div class="talent-photo">
+          <img src="image/jonathan.jpg" alt="Jonathan Pagden at a sound desk, wearing headphones, in front of a microphone" loading="lazy" style="object-position:50% 20%;">
+        </div>
+        <div class="talent-body">
+          <div class="talent-role">Voice of God announcer</div>
+          <h3>Jonathan Pagden</h3>
+          <p>The voice that keeps awards nights and conferences polished and on time. Working from the control desk as an off-stage co-presenter, he tells the audience why each winner has won as they walk to the stage. Credits include the Coronation, VE Day and Trooping the Colour.</p>
+          <div class="voice">
+            <div class="voice-label"><span class="dot"></span> Hear his voice</div>
+            <video src="video/jonathan-voice.mp4" poster="image/jonathan-video-poster.jpg" controls playsinline preload="none"></video>
+          </div>
+          <div class="talent-tags">Awards · Conferences · Galas</div>
+        </div>
+      </article>
+
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="#" data-form="client">Tell Us About Your Event</a>
+    </div>
+  </div>
+</section>
+
 <section class="runshow" id="how">
   <div class="wrap">
     <div class="runshow-head">
       <div class="eyebrow"><span class="dot"></span> Run of show</div>
       <h2>How It Works.</h2>
+      <p>You deal with the founder, not a call centre. Every booking is personally managed from first enquiry to the final bow.</p>
     </div>
     <div class="cues">
       <div class="cue-row">
@@ -566,8 +766,8 @@
       </div>
       <div class="cue-row">
         <span class="num">02</span>
-        <span class="cue-title">We recommend the right MC</span>
-        <span class="cue-desc">We'll personally shortlist the best fit.</span>
+        <span class="cue-title">We recommend the right talent</span>
+        <span class="cue-desc">A personal reply to your enquiry within 48 hours.</span>
       </div>
       <div class="cue-row">
         <span class="num">03</span>
@@ -578,9 +778,24 @@
   </div>
 </section>
 
+<section class="brief" id="host-brief">
+  <div class="wrap">
+    <div class="brief-box">
+      <div>
+        <span class="free">Free download</span>
+        <h2>The Host Brief</h2>
+        <p>The checklist to complete before you book any MC, speaker or presenter. Know exactly what to ask, what to share and how to keep your event running to time.</p>
+      </div>
+      <div class="brief-cta">
+        <a class="btn btn-solid" href="#" data-form="brief">Get the free checklist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="quote">
   <div class="wrap">
-    <blockquote>"Delivering MCs that elevate your events and ignite audiences."</blockquote>
+    <blockquote>"Delivering voices that elevate your events and ignite audiences."</blockquote>
     <cite>— Founder, Sonia Joy</cite>
   </div>
 </section>
@@ -588,18 +803,28 @@
 <section class="final">
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span> Currently booking</div>
-    <h2>Find the right MC for your event.</h2>
+    <h2>Find the right voice for your event.</h2>
     <div class="hero-ctas">
       <a class="btn btn-solid" href="#" data-form="client">Tell Us About Your Event</a>
       <a class="btn" href="#" data-form="mc">Apply To Join Our Roster</a>
+    </div>
+    <div class="contact" id="contact">
+      <div class="contact-label">Prefer email? Write to us directly</div>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:enquiry@sjeandco.com">
+          <small>Email</small>
+          <span>enquiry@sjeandco.com</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
-    <span>Sonia Joy ©️ 2026</span>
-    <span>Founded by a professional MC · 10+ years live experience · UK-based</span>
+    <span>Sonia Joy © 2026 &nbsp;·&nbsp;<a href="mailto:enquiry@sjeandco.com">enquiry@sjeandco.com</a></span>
+    <span><a href="pricing.html">Pricing guide</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a> &nbsp;·&nbsp; <a href="cookies.html">Cookie policy</a></span>
+    <p class="disclaimer">SJE &amp; Co works with independent talent on a non-exclusive basis. Talent may also accept bookings directly or through other agencies. Views expressed by talent are their own.</p>
   </div>
 </footer>
 
@@ -614,6 +839,7 @@
 <script>
   const CLIENT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfQXCxA7GO3tJUZGoWTe2qPAenP-O30IfoQxjdA7v1FY5gYFA/viewform?embedded=true";
   const MC_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdYXwspo-piDxgMKueP3Mjv38f6P0OjEGR80hejhSWEJ69ZaQ/viewform?embedded=true";
+  const BRIEF_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeXb7CE39oWWTQ0IekKMtjFrQagbhcw11lcKdoofyHxPvcE3Q/viewform?embedded=true";
 
 
   const modal = document.getElementById("formModal");
@@ -622,9 +848,21 @@
   document.querySelectorAll("[data-form]").forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
-      frame.src = btn.dataset.form === "client" ? CLIENT_FORM_URL : MC_FORM_URL;
+      const forms = { client: CLIENT_FORM_URL, mc: MC_FORM_URL, brief: BRIEF_FORM_URL };
+      frame.src = forms[btn.dataset.form] || CLIENT_FORM_URL;
       modal.classList.add("active");
       document.body.classList.add("modal-open");
+    });
+  });
+
+  document.querySelectorAll(".filter").forEach(f => {
+    f.addEventListener("click", () => {
+      document.querySelectorAll(".filter").forEach(x => x.classList.remove("active"));
+      f.classList.add("active");
+      const tag = f.dataset.filter;
+      document.querySelectorAll(".talent").forEach(card => {
+        card.classList.toggle("hidden", tag !== "all" && !card.dataset.tags.split(" ").includes(tag));
+      });
     });
   });
 
